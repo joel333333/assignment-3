@@ -68,4 +68,12 @@
     </footer>
 </center>
 </body>
+<script>
+    window.addEventListener("beforeunload", function (event) {
+      // Message is mostly ignored by modern browsers, but we set it anyway
+      let confirmationMessage = "Joel.A";
+      event.returnValue = confirmationMessage; // Standard way
+      return confirmationMessage; // For older browsers
+    });
+</script>
 </html>
